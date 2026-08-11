@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>A SignUp Page</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<section>
+		<div class="left">
+		</div>
+		<div class="right">
+			
+				<h1>Roctec Libraries</h1>
+				<h2> Welcome to Roctec Libraries</h2>
+				 <form action="authenticate.php" method="POST">
+				<input type="text" name="username" placeholder="Username" id="userName" class='red' required>
+				<input type="password" name="password" placeholder="Password" id="passWord" class='red' required>
+                                <h5> Forgot password?</h5>
+
+				<div class="botton">
+				<button class="butt" type="submit">Sign in</button>
+				</div>
+
+                                <div class="botton1">
+
+                                <button class="butt1">______________</button>
+                                <button class="butt2">or</button>
+                                <button class="butt3">______________</button>
+                                </div>
+
+                                <div class="google">
+                                <img src="google-icon-logo-svgrepo-com.svg"> <h6>Sign in with Google </h6>
+                                </div>
+
+                                <div class="github">
+                                <img src="github.jpg"> <h6> Sign in with Github </h6>
+                                </div>	
+								
+				</form>		
+		</div>
+	</section>
+</body>
+</html>
