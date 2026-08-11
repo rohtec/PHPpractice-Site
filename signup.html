@@ -1,0 +1,67 @@
+<?php
+$registrationSuccessful = isset($_GET["registered"]) && $_GET["registered"] === "success";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>A SignUp Page</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<section>
+		<div class="left">
+		</div>
+		<div class="right">
+			<form action="register.php" method="post">
+				<h1>Sign Up</h1>
+				<label>Full Name</label>
+				<input type="text" name="fullname" placeholder="Full name" id="fullName" class='red' required>
+				<label>Email</label>
+				<input type="email" name="email" placeholder="Email address.." class='red' required>
+				<label>Username</label>
+				<input type="text" name="username" placeholder="User name" id="userName" class='red' required>
+				<label>Password</label>
+				<input type="password" name="password" placeholder="************" id="passWord" class='red' required>
+				<label>Repeat Password</label>
+				<input type="password" name="confirm_password" placeholder="************" id="CpassWord" class='red' required>
+				<div class="check"><input type="checkbox"><span>I Agree to the Terms of User</span></div>
+				<div class="botton">
+				<button class="butt" type="submit">Continue</button>
+			</div>
+			</form>
+		</div>
+		
+		<!--<img src="icon-arrow.svg">-->
+	</section>
+	<?php if ($registrationSuccessful): ?>
+
+<div class="success-overlay">
+
+    <div class="success-box">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>Registration Successful!</h2>
+
+        <p>
+            Your account has been created successfully.
+        </p>
+
+        <a href="index.html" class="success-button">
+            Continue to Sign In
+        </a>
+
+    </div>
+
+</div>
+
+<?php endif; ?>
+
+</body>
+</html>

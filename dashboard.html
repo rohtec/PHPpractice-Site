@@ -1,0 +1,68 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION["user_id"])) {
+
+    header("Location: signin.html");
+    exit();
+
+}
+
+?>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>Dashboard</title>
+<link rel="stylesheet" type="text/css" href="logout.css">
+<script type="text/javascript" src="index.js"></script>
+
+</head>
+
+<body>
+    <div class="success-overlay">
+
+    <div class="success-box">
+
+
+        <h1> Welcome,
+
+        <?php echo $_SESSION["username"]; ?>
+        &#1F917;
+
+        </h1>
+
+        <p>
+           The Dashboard is still under construction &#1F629; &#1F629;.
+        </p>
+
+        <button class="butt">
+
+        <a href="index.html" class="success-button">
+            Logout
+        </a>
+
+</button>
+
+    </div>
+
+</div>
+
+<!-- <h1>
+
+Welcome,
+
+<?php echo $_SESSION["fullname"]; ?>
+
+</h1>
+
+<a href="logout.html">Logout</a> -->
+
+</body>
+
+</html>
